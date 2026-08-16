@@ -1,192 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Gunjan ❤️</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday Surprise ❤️</title>
 
-<style>
-* {
-  box-sizing: border-box;
-}
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffe6f0, #fff5f8);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: #444;
+    }
 
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  overflow: hidden;
-  text-align: center;
-}
+    .container {
+      padding: 40px 20px;
+    }
 
-.container {
-  width: 90%;
-  max-width: 430px;
-}
+    h1 {
+      color: #ff4f81;
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
 
-h1 {
-  color: white;
-  font-size: 30px;
-}
+    h2 {
+      color: #ff6f91;
+    }
 
-.subtitle {
-  color: white;
-  font-size: 17px;
-  margin-bottom: 30px;
-}
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
 
-.gift {
-  font-size: 100px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
+    .photo {
+      width: 90%;
+      max-width: 400px;
+      border-radius: 20px;
+      margin-top: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
 
-.gift:hover {
-  transform: scale(1.1);
-}
-
-#letter {
-  display: none;
-  background: rgba(255,255,255,0.96);
-  padding: 28px 22px;
-  border-radius: 25px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-  animation: pop 0.7s ease;
-}
-
-#letter h2 {
-  color: #ff4f81;
-}
-
-.note {
-  color: #444;
-  line-height: 1.6;
-  font-size: 16px;
-  margin: 15px 0;
-}
-
-.heart {
-  position: fixed;
-  bottom: -30px;
-  font-size: 25px;
-  animation: float 4s linear forwards;
-}
-
-@keyframes pop {
-  from {
-    transform: scale(0.3);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes float {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-110vh);
-    opacity: 0;
-  }
-}
-
-button {
-  -webkit-tap-highlight-color: transparent;
-}
-</style>
+    .message {
+      margin: 25px auto;
+      max-width: 500px;
+      background: white;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <div id="intro">
-    <h1>🎁 A little surprise for Gunjan</h1>
-    <p class="subtitle">There's something waiting for you...</p>
+    <h1>Happy Birthday ❤️</h1>
 
-    <button class="gift" onclick="openGift()">🎁</button>
+    <h2>To Someone Very Special 💕</h2>
 
-    <p class="subtitle">Tap the gift ❤️</p>
-  </div>
+    <div class="message">
+      <p>
+        Wishing you the happiest birthday! 🎂❤️
+      </p>
 
-  <div id="letter">
+      <p>
+        I hope your day is filled with happiness,
+        smiles and beautiful memories. 💗
+      </p>
+    </div>
 
-    <h2>🎂 Happy Birthday, Gunjan! ❤️</h2>
+    <h2>Our Special Memory 📸</h2>
 
-    <p class="note">
-      Happy Birthday to someone who makes my days a little brighter
-      just by being there. 🥹❤️
-    </p>
-
-    <p class="note">
-      I wish I could be there with you today to celebrate properly,
-      but until that day comes, I hope this little surprise reminds
-      you how special you are to me.
-    </p>
-
-    <p class="note">
-      Distance may keep us apart physically, but it doesn't stop
-      the memories, laughs, conversations and moments we share. 💗
-    </p>
-
-    <p class="note">
-      I hope this new year of your life brings you lots of happiness,
-      peace, success and countless reasons to smile.
-    </p>
-
-    <p class="note">
-      Thank you for being such an important part of my life.
-      Keep smiling, keep being yourself, and never forget how
-      amazing you are. ❤️
-    </p>
-
-    <h2>Happy Birthday, Gunjan! 🎂💗</h2>
-
-    <p class="note">
-      — From someone who's always cheering for you ❤️
-    </p>
+    <img class="photo" src="photo1.jpg" alt="Special memory">
 
   </div>
-
-</div>
-
-<script>
-
-function openGift() {
-
-  document.getElementById("intro").style.display = "none";
-  document.getElementById("letter").style.display = "block";
-
-  // Floating hearts
-  for (let i = 0; i < 35; i++) {
-
-    let heart = document.createElement("div");
-
-    heart.className = "heart";
-    heart.innerHTML = ["❤️","💗","💕","💖","💝"][Math.floor(Math.random()*5)];
-
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = (3 + Math.random() * 3) + "s";
-    heart.style.fontSize = (18 + Math.random() * 20) + "px";
-
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-      heart.remove();
-    }, 6000);
-  }
-}
-
-</script>
 
 </body>
 </html>
